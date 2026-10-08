@@ -3,10 +3,15 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 HOST = "0.0.0.0"
 PORT = 8000
 
+
 class AppHandler(BaseHTTPRequestHandler):
     def do_GET(self):
-
-        body = "Advanced Git Docker App\nStatus: healthy - tarik143\nDetails: Application is operational\nVersion: 1.1\n"body = "Advanced Git Docker App\nStatus: healthy - tarik143\nDetails: Application is operational\nVersion: 1.1\n"
+        body = (
+            "Advanced Git Docker App\n"
+            "Status: healthy - tarik143\n"
+            "Details: Application is operational\n"
+            "Version: 1.1\n"
+        )
 
         self.send_response(200)
         self.send_header("Content-Type", "text/plain")
